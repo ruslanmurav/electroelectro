@@ -78,22 +78,15 @@ WSGI_APPLICATION = 'electrodom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'goods',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    },
-    'users': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'users',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'ep-plain-wind-55806712-pooler.us-east-1.postgres.vercel-storage.com',
+        'PORT': '5432',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'EmWIT65fkhMJ',
     }
 }
+
 
 
 
