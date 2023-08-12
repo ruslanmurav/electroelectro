@@ -2,8 +2,12 @@
     "builds": [{
         "src": "electrodom/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" },
+         "env": {
+          "DATABASE_URL": "postgres://default:EmWIT65fkhMJ@ep-plain-wind-55806712-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+            },
+            "postbuild": "python manage.py migrate"
+            }],
     "routes": [
         {
             "src": "/(.*)",
@@ -11,3 +15,5 @@
         }
     ]
 }
+
+
