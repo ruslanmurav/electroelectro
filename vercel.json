@@ -13,7 +13,18 @@
             "src": "/(.*)",
             "dest": "electrodom/wsgi.py"
         }
+    ],
+    {
+  "build": {
+    "env": {
+      "DATABASE_URL": "postgres://default:EmWIT65fkhMJ@ep-plain-wind-55806712-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+    },
+    "postbuild": [
+      "python manage.py makemigrations",
+      "python manage.py migrate"
     ]
+  }
+}
 }
 
 
