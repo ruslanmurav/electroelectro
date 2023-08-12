@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'electrodom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'ep-plain-wind-55806712-pooler.us-east-1.postgres.vercel-storage.com',
         'PORT': '5432',
         'NAME': 'verceldb',
